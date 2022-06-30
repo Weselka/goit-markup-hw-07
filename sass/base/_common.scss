@@ -11,13 +11,18 @@ img {
 
 .list {
     list-style: none;
+    .features-list &:not(:last-child),
+    .work-list &:not(:last-child),
+    .teams-list &:not(:last-child) {
+        margin-right: 30px;
+}
 }
 
 .link {
     transition: color var(--transition);
 
     text-decoration: none;
-    .main-nav &:hover,
+    .header__nav &:hover,
     .nav &:hover,
     .nav &:focus,
     .footer &:hover,
@@ -28,10 +33,4 @@ img {
     .gallery &:focus {
         color: var(--accent-color);
 } 
-}
-
-.features-list .list:not(:last-child),
-.work-list .list:not(:last-child),
-.teams-list .list:not(:last-child) {
-    margin-right: 30px;
 }

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 :root {
   --primary-text-color: #212121;
   --title-text-color: #757575;
@@ -27,6 +26,10 @@ ul {
   padding: 0;
 }
 
+textarea {
+  resize: none;
+}
+
 body {
   font-family: var(--main-font);
   background-color: var(--primary-bgc);
@@ -38,10 +41,6 @@ img {
   height: auto;
 }
 
-textarea {
-  resize: none;
-}
-
 .list {
   list-style: none;
 }
@@ -50,16 +49,7 @@ textarea {
   transition: color var(--transition);
   text-decoration: none;
 }
-
-.main-nav .link:hover,
-.site-nav .link:hover,
-.site-nav .link:focus,
-.footer .link:hover,
-.footer .link:focus,
-.contact .link:hover,
-.contact .link:focus,
-.gallery .link:hover,
-.gallery .link:focus {
+.main-nav .link:hover, .nav .link:hover, .nav .link:focus, .footer .link:hover, .footer .link:focus, .contact .link:hover, .contact .link:focus, .gallery .link:hover, .gallery .link:focus {
   color: var(--accent-color);
 }
 
@@ -147,18 +137,19 @@ textarea {
   outline: transparent;
 }
 
+.header {
+  border: 1px solid transparent;
+  border-bottom-color: #ECECEC;
+}
+
 .main-nav,
-.site-nav {
+.nav__list {
   display: flex;
 }
 
-.logo-header {
+.logo {
   display: block;
   min-width: 145px;
-  /* height: 100%; */
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
@@ -167,12 +158,25 @@ textarea {
   letter-spacing: 0.03em;
 }
 
-.logo-up {
+.header__logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
+}
+
+.logo-dark {
   margin-bottom: 0;
   color: #000000;
 }
 
-.site-nav .link {
+.nav__item {
+  position: relative;
+}
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
   display: block;
   height: 100%;
   padding-top: 32px;
@@ -184,19 +188,10 @@ textarea {
   letter-spacing: 0.02em;
 }
 
-.site-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.site-nav .link.current {
+.nav__link--current {
   color: var(--accent-color);
 }
-
-.site-nav .item {
-  position: relative;
-}
-
-.current::after {
+.nav__link--current::after {
   content: "";
   position: absolute;
   bottom: -4px;
@@ -207,22 +202,25 @@ textarea {
   border-radius: 2px;
 }
 
-.page-header {
-  border: 1px solid transparent;
-  border-bottom-color: #ECECEC;
-}
-
-/*------------------Контакти-----------------------*/
-.contact {
+.header__contact {
   display: flex;
   margin-left: auto;
 }
 
-.contact .item:not(:last-child) {
+.contact__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: currentColor;
+}
+.contact__item:hover {
+  fill: var(--accent-color);
+}
+.contact__item:not(:last-child) {
   margin-right: 30px;
 }
 
-.contact .link {
+.contact__link {
   display: flex;
   align-items: center;
   height: 100%;
@@ -235,18 +233,7 @@ textarea {
   letter-spacing: 0.02em;
 }
 
-.item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  fill: currentColor;
-}
-
-.item:hover {
-  fill: var(--accent-color);
-}
-
-.icon {
+.contact__icon {
   padding-right: 10px;
 }
 
@@ -479,17 +466,6 @@ textarea {
 .footer {
   padding: 60px 0;
   background-color: #2f303a;
-}
-
-.logo-footer {
-  min-width: 145px;
-  display: block;
-  color: var(--accent-color);
-  font-family: Raleway, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 
 .logo-down {

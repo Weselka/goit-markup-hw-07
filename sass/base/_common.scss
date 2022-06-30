@@ -9,10 +9,6 @@ img {
     height: auto;
 }
 
-textarea {
-    resize: none;
-}
-
 .list {
     list-style: none;
 }
@@ -21,18 +17,17 @@ textarea {
     transition: color var(--transition);
 
     text-decoration: none;
-}
-
-.main-nav .link:hover,
-.site-nav .link:hover,
-.site-nav .link:focus,
-.footer .link:hover,
-.footer .link:focus,
-.contact .link:hover,
-.contact .link:focus,
-.gallery .link:hover,
-.gallery .link:focus {
-    color: var(--accent-color);
+    .main-nav &:hover,
+    .nav &:hover,
+    .nav &:focus,
+    .footer &:hover,
+    .footer &:focus,
+    .contact &:hover,
+    .contact &:focus,
+    .gallery &:hover,
+    .gallery &:focus {
+        color: var(--accent-color);
+} 
 }
 
 .features-list .list:not(:last-child),

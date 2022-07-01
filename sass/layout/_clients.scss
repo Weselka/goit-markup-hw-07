@@ -11,10 +11,10 @@
 
     border: 1px solid var(--subgect-color);
     border-radius: 4px;
-}
 
-.clients-item:not(:last-child) {
-    margin-right: 30px;
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
 }
 
 .clients-link {
@@ -27,15 +27,15 @@
     color: var(--subgect-color);
 
     transition: border var(--transition), color var(--transition);
+
+        &:hover,
+        &:focus {
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+            outline: transparent;
+        }
 }
 
 .clients-icon {
     fill: currentColor;
-}
-
-.clients-link:hover,
-.clients-link:focus {
-    border: 1px solid var(--accent-color);
-    color: var(--accent-color);
-    outline: transparent;
 }

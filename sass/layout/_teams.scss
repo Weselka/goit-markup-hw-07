@@ -1,6 +1,4 @@
-.section.teams {
-    background: #f5f4fa;
-}
+
 
 .teams-title {
     margin-bottom: 50px;
@@ -45,10 +43,9 @@
     width: 44px;
     height: 44px;
 
-}
-
-.teams-soc-item:not(:last-child) {
-    margin-right: 10px;
+    &:not(:last-child) {
+        margin-right: 10px;
+    }
 }
 
 .teams-soc-link {
@@ -62,15 +59,15 @@
 
     transition: background-color var(--transition), color var(--transition);
     border-radius: 50%;
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        color: var(--more-text-color);
+        outline: transparent;
+    }
 }
 
 .teams-soc-icon {
     fill: currentColor;
-}
-
-.teams-soc-link:hover,
-.teams-soc-link:focus {
-    background-color: var(--accent-color);
-    color: var(--more-text-color);
-    outline: transparent;
 }

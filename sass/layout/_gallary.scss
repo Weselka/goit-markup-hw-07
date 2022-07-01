@@ -1,56 +1,28 @@
-.gallery-btn {
-    color: var(--primary-text-color);
-    background: #f5f4fa;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.62;
-
-    text-align: center;
-    letter-spacing: 0.03em;
-    border-radius: 4px;
-    border: 1px solid transparent;
-    cursor: pointer;
-    transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
-}
-
-.btn:hover,
-.btn:focus {
-    background: #188CE8;
-    color: var(--more-text-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-    outline: transparent;
-}
-
-.flex-elements .button:not(:last-child) {
-    margin-right: 9px;
-}
-
 .flex-elements {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
 
-.flex-elements.button {
-    margin-bottom: 50px;
-}
+    &>.item {
+        flex-basis: calc(100% / 3 - var(--gallery-section-gap));
+        margin-left: var(--gallery-section-gap);
+        margin-top: var(--gallery-section-gap);
 
-.flex-elements>.item {
-    flex-basis: calc(100% / 3 - var(--gallery-section-gap));
-    margin-left: var(--gallery-section-gap);
-    margin-top: var(--gallery-section-gap);
+        background: var(--primary-bgc);
+    }
 
-    background: var(--primary-bgc);
-}
+    & .button:not(:last-child) {
+        margin-right: 9px;
+    }
 
-.flex-elements.gallery {
-    margin-left: calc(-1 * var(--gallery-section-gap));
-    margin-top: calc(-1 * var(--gallery-section-gap));
-}
+    &.button {
+        margin-bottom: 50px;
+    }
 
-.flex-elements .btn {
-    display: block;
-    padding: 6px 22px;
+    &.gallery {
+        margin-left: calc(-1 * var(--gallery-section-gap));
+        margin-top: calc(-1 * var(--gallery-section-gap));
+    }
 }
 
 .gallery-subject {
@@ -76,14 +48,15 @@
     color: var(--title-text-color);
 }
 
-.gallery-section:hover,
+.gallery-section {
+    transition: box-shadow var(--transition);
+
+        
+}
+a:hover,
 .gallery-section:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     outline: transparent;
-}
-
-.gallery-section {
-    transition: box-shadow var(--transition);
 }
 
 .gallery-thumb {
@@ -106,9 +79,9 @@
     transform: translateY(101%);
     transition: transform var(--transition);
     overflow: auto;
-}
 
-.gallery-section:hover .thumb-text,
-.gallery-section:focus .thumb-text {
-    transform: translateY(0);
+        .gallery-section:hover &,
+        .gallery-section:focus & {
+            transform: translateY(0);
+        }
 }

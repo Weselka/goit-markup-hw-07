@@ -12,27 +12,23 @@
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
-<header class="page-header">
-    <div class="container main-nav">
-        <a href="" lang="en" class="logo-header link">Web<span class="logo-up link">Studio</span>
+<header class="header">
+    <div class="container header__nav">
+        <a href="" lang="en" class="logo header__logo link">Web<span class="logo__logo-dark link">Studio</span>
         </a>
-        <nav>
-            <ul class="site-nav list">
-                <li class="item">
-                    <a href="./index.html" class="link">Студия</a>
+        <nav class="nav">
+            <ul class="nav__list list">
+                <li class="nav__item">
+                    <a href="./index.html" class="nav__link link">Студия</a>
                 </li>
-                <li class="item">
-                    <a href="./portfolio.html" class="link current">Портфолио</a>
-                </li>
-                <li class="item">
-                    <a href="" class="link">Контакты</a>
-                </li>
+                <li class="nav__item"><a href="./portfolio.html" class="nav__link nav__link--current link">Портфолио</a></li>
+                <li class="nav__item"><a href="" class="nav__link link">Контакты</a></li>
             </ul>
         </nav>
-        <ul class="contact list">
-            <li class="item">
-                <a href="mailto:info@devstudio.com" class="contact-link link">
-                    <div class="icon">
+        <ul class="contact header__contact list">
+            <li class="contact__item">
+                <a href="mailto:info@devstudio.com" class="contact__link link">
+                    <div class="contact__icon">
                         <svg width="16" height="12">
                             <use href="./images/symbol-contacts-defs.svg#envelope"></use>
                         </svg>
@@ -40,9 +36,9 @@
                     info@devstudio.com
                 </a>
             </li>
-            <li class="item">
-                <a href="tel:+380961111111" class="contact-link link">
-                    <div class="icon">
+            <li class="contact__item">
+                <a href="tel:+380961111111" class="contact__link link">
+                    <div class="contact__icon">
                         <svg width="10" height="16">
                             <use href="./images/symbol-contacts-defs.svg#smartphone"></use>
                         </svg>
@@ -179,50 +175,50 @@
         </section>
     </main>
     <footer class="footer">
-        <div class="container footer-info">
-            <div class="footer-site">
-                <a href="" lang="en" class="logo-footer link">Web<span class="logo-down link">Studio</span>
+        <div class="container footer__info">
+            <div class="footer__site">
+                <a href="" lang="en" class="logo link">Web<span class="logo__white link">Studio</span>
                 </a>
-                <address class="address">
-                    <a href="" class="footer-address link">г. Киев, пр-т Леси Украинки, 26</a>
-                    <ul class="footer-list list">
-                        <li class="address-link"><a href="mailto:info@example.com"
-                                class="footer-link link">info@example.com</a></li>
-                        <li class="address-link"><a href="tel:+380991111111" class="footer-link link">+38 099 111 11 11</a>
-                        </li>
+                <address class="address footer__address">
+                    <a href="" class="address__link address__link--white link">г. Киев, пр-т Леси Украинки, 26</a>
+                    <ul class="address__list list">
+                        <li class="address__item"><a href="mailto:info@example.com"
+                                class="address__link address__link--grey link">info@example.com</a></li>
+                        <li class="address__item"><a href="tel:+380991111111"
+                                class="address__link address__link--grey link">+38 099 111 11 11</a></li>
                     </ul>
                 </address>
             </div>
-            <div class="footer-soc-info">
-                <strong class="footer-title">присоединяйтесь</strong>
-                <ul class="footer-soc-list list">
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg width="20" height="20" class="footer-soc-icon">
+            <div class="soc-info footer__soc-info">
+                <strong class="footer__title">присоединяйтесь</strong>
+                <ul class="social soc-info__list list">
+                    <li class="social__item">
+                        <a class="social__link" href="">
+                            <svg width="20" height="20" class="social__icon">
                                 <use href="./images/symbol-soc-link-defs.svg#instagram">
                                 </use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg width="20" height="20" class="footer-soc-icon">
+                    <li class="social__item">
+                        <a class="social__link" href="">
+                            <svg width="20" height="20" class="social__icon">
                                 <use href="./images/symbol-soc-link-defs.svg#twitter">
                                 </use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg width="20" height="20" class="footer-soc-icon">
+                    <li class="social__item">
+                        <a class="social__link" href="">
+                            <svg width="20" height="20" class="social__icon">
                                 <use href="./images/symbol-soc-link-defs.svg#facebook">
                                 </use>
                             </svg>
                         </a>
                     </li>
-                    <li class="footer-soc-item">
-                        <a class="footer-soc-link" href="">
-                            <svg width="20" height="20" class="footer-soc-icon">
+                    <li class="social__item">
+                        <a class="social__link" href="">
+                            <svg width="20" height="20" class="social__icon">
                                 <use href="./images/symbol-soc-link-defs.svg#linkedin">
                                 </use>
                             </svg>
@@ -230,19 +226,19 @@
                     </li>
                 </ul>
             </div>
-            <form class="footer-form">
-                <p class="footer-title">Подпишитесь на рассылку</p>
-                <div class="footer-strong">
-                    <input class="footer-input" type="email" name="email" id="email" placeholder="E-mail" />
-                    <div class="footer-btn">
-                        <button type="submit" class="footer-submit">Подписаться&nbsp
-                            <svg class="footer-icon" width="24" height="24">
+            <div class="form-wrap footer__form">
+                <p class="footer__title">Подпишитесь на рассылку</p>
+                <form class="form-footer form-wrap__strong">
+                    <input class="form-footer__input" type="email" name="email" placeholder="E-mail" />
+                    <div class="btn-wrap">
+                        <button type="submit" class="btn btn-wrap__footer">Подписаться&nbsp
+                            <svg width="24" height="24">
                                 <use href="./images/symbol-contacts-defs.svg#send"></use>
                             </svg>
                         </button>
                     </div>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </footer>
 </body>

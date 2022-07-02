@@ -17,6 +17,12 @@
     flex-basis: calc(100% / #{$q} - #{$gap});
 }
 
+@mixin btn($br, $b) {
+  border-radius: $br;
+  border: $b;
+  cursor: pointer;
+}
+
 @mixin transition($one, $two, $three, $td, $ttf) {
   transition-property: $one, $two, $three;
   transition-duration: $td;

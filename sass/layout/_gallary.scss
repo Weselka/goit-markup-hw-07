@@ -1,72 +1,41 @@
-.flex-elements {
-    // display: flex;
-    // flex-wrap: wrap;
+.portfolio__filters {
+    @include list(flex, wrap, null, null, null, null, 50px);
+    justify-content: center;    
+}
+
+.filters__item:not(:last-child) {
+    margin-right: 9px;
+}
+
+.portfolio__cards {
     @include list(flex, wrap, -15px, null, null, null, null);
-    justify-content: center;
-
-    &>.item {
-        // flex-basis: calc(100% / 3 - var(--gallery-section-gap));
-        // margin-left: var(--gallery-section-gap);
-        // margin-top: var(--gallery-section-gap);
-        @include item(15px, null, null, null, null, 3, 30px);
-
-        background: var(--primary-bgc);
-    }
-
-    & .button:not(:last-child) {
-        margin-right: 9px;
-    }
-
-    &.button {
-        margin-bottom: 50px;
-    }
-
-    // &.gallery {
-    //     margin-left: calc(-1 * var(--gallery-section-gap));
-    //     margin-top: calc(-1 * var(--gallery-section-gap));
-    // }
-    
+    justify-content: center;     
 }
 
-.gallery-subject {
-    padding: 20px 24px;
+.gallery__item {
+    @include item(15px, null, null, null, null, 3, var(--gallery-section-gap));
 
-    border: 1px solid #EEEEEE;
-    border-top-color: transparent;
+    background: var(--primary-bgc);
 }
 
-.gallery-title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: var(--primary-text-color);
-}
-
-.gallery-text {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
-}
-
-.gallery-section {
-    display: block;
+.gallery__card {
+    display: flex;
+    flex-direction: column;
     transition: box-shadow var(--transition);
+
     &:hover,
     &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     outline: transparent;
-}        
+}
 }
  
-.gallery-thumb {
+.gallery__thumb {
     position: relative;
     overflow: hidden;
 }
 
-.thumb-text {
+.gallery__text {
     position: absolute;
     top: 0;
     padding: 63px 24px;
@@ -80,10 +49,16 @@
 
     transform: translateY(101%);
     transition: transform var(--transition);
-    overflow: auto;
+    overflow: auto;   
+    .gallery__card:hover &,
+    .gallery__card:focus & {        
+    transform: translateY(0);
+}
+}
 
-        .gallery-section:hover &,
-        .gallery-section:focus & {
-            transform: translateY(0);
-        }
+.gallery__subject {
+    padding: 20px 24px;
+
+    border: 1px solid #EEEEEE;
+    border-top-color: transparent;
 }

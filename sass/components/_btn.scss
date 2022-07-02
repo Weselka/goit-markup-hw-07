@@ -1,17 +1,10 @@
 .btn {
-    // @include btn(4px, 1px solid transparent);
-    border-radius: 4px;
-    border: 1px solid transparent;
+    @include btn(4px, 1px solid transparent);
+    @include font(null, 700, 16px, 30px, 0.06em, var(--more-text-color));
 
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 1.88;
+    
     align-items: center;
-    letter-spacing: 0.06em;
-    color: var(--more-text-color);
     background: var(--accent-color);
-
-    cursor: pointer;
 
     transition: background-color var(--transition), box-shadow var(--transition);
 
@@ -30,7 +23,7 @@
     background: #f5f4fa;
     text-align: center;
 
-    @include font(inherit, 500, 16px, 26px, 0.03em, var(--primary-text-color));
+    @include font(null, 500, 16px, 26px, 0.03em, var(--primary-text-color));
     @include btn(4px, 1px solid transparent);
 
     transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
@@ -58,4 +51,49 @@
     align-items: center;
     height: 100%;
     padding: 10px 29px;
+}
+
+.hero-btn {
+    padding: 10px 30px;
+
+    @include btn(4px, 1px solid transparent);
+    @include font(null, 700, 16px, 30px, 0.06em, var(--more-text-color));
+
+    background: var(--accent-color);
+
+    transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
+
+    &:hover,
+    &:focus {
+        background: #188CE8;
+        color: var(--more-text-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        outline: transparent;
+    }
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+
+    background: var(--primary-bgc);
+    @include btn(50%, 1px solid rgba(0, 0, 0, 0.1));
+    
+    transition: border-color var(--transition), fill var(--transition);
+
+        &:hover,
+        &:focus {
+            outline: transparent;
+            border-color: var(--accent-color);
+        }
+        &:hover>.close-icon,
+        &:focus>.close-icon {
+            fill: var(--accent-color);
+}
 }

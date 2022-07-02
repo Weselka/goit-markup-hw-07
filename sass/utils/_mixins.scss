@@ -23,12 +23,6 @@
   cursor: pointer;
 }
 
-@mixin transition($one, $two, $three, $td, $ttf) {
-  transition-property: $one, $two, $three;
-  transition-duration: $td;
-  transition-timing-function: $ttf;
-}
-
 @mixin font($ff, $fw, $fs, $lh, $ls, $c) {
   font-family: $ff;
   font-weight: $fw;

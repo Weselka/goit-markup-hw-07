@@ -37,48 +37,6 @@
     }
 }
 
-.modal-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-
-    background: var(--primary-bgc);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-
-    cursor: pointer;
-
-    transition: border-color var(--transition), fill var(--transition);
-
-        &:hover,
-        &:focus {
-            outline: transparent;
-            border-color: var(--accent-color);
-        }
-}
-
-.modal-close:hover>.close-icon,
-.modal-close:focus>.close-icon {
-    fill: var(--accent-color);
-}
-
-.form-title {
-    margin-bottom: 12px;
-
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: var(--primary-text-color);
-}
-
 .form-group {
     position: relative;
 
@@ -151,11 +109,7 @@
         justify-content: center;
         margin: 0;
 
-        font-size: 14px;
-        line-height: 1.71;
-        letter-spacing: 0.03em;
-
-        color: var(--title-text-color);
+        @include font(null, null, 14px, 24px, 0.03em, var(--title-text-color));
     }
 }
 
@@ -163,11 +117,7 @@
     height: 120px;
     padding: 16px 12px;
 
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
+    @include font(null, null, 14px, 24px, 0.01em, rgba(117, 117, 117, 0.5));
 
     transition: outline var(--transition),
         border-color var(--transition);

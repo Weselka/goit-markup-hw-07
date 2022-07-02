@@ -84,16 +84,47 @@ img {
 .section.teams {
   background: #f5f4fa;
 }
+.section.work {
+  padding-top: 0;
+}
 
 .work-title,
 .teams-title,
 .clients-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
+}
+
+.teams-title,
+.work-title {
+  margin-bottom: 50px;
+}
+
+.work-subtitle {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.71;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: rgba(47, 48, 58, 0.8);
+  color: #FFFFFF;
 }
 
 .teams-name,
@@ -104,12 +135,29 @@ img {
   letter-spacing: 0.03em;
 }
 
+.teams-name {
+  margin-bottom: 10px;
+  color: var(--primary-text-color);
+  font-weight: 500;
+}
+
+.teams-expert {
+  margin-bottom: 16px;
+  color: var(--title-text-color);
+}
+
+.feature-title,
 .footer__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+}
+
+.feature-title {
+  margin-bottom: 10px;
+  color: var(--primary-text-color);
 }
 
 .gallery__title {
@@ -128,17 +176,40 @@ img {
   color: var(--title-text-color);
 }
 
+.hero-title {
+  margin: auto;
+  max-width: 696px;
+  margin-bottom: 30px;
+  color: var(--more-text-color);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form-title {
+  margin-bottom: 12px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+
 .btn {
   border-radius: 4px;
   border: 1px solid transparent;
+  cursor: pointer;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.88;
-  align-items: center;
+  line-height: 1.875;
   letter-spacing: 0.06em;
   color: var(--more-text-color);
+  align-items: center;
   background: var(--accent-color);
-  cursor: pointer;
   transition: background-color var(--transition), box-shadow var(--transition);
 }
 .btn:hover, .btn:focus {
@@ -152,7 +223,6 @@ img {
   padding: 6px 22px;
   background: #f5f4fa;
   text-align: center;
-  font-family: inherit;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.625;
@@ -184,6 +254,49 @@ img {
   padding: 10px 29px;
 }
 
+.hero-btn {
+  padding: 10px 30px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: var(--more-text-color);
+  background: var(--accent-color);
+  transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
+}
+.hero-btn:hover, .hero-btn:focus {
+  background: #188CE8;
+  color: var(--more-text-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  outline: transparent;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  background: var(--primary-bgc);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: border-color var(--transition), fill var(--transition);
+}
+.modal-close:hover, .modal-close:focus {
+  outline: transparent;
+  border-color: var(--accent-color);
+}
+.modal-close:hover > .close-icon, .modal-close:focus > .close-icon {
+  fill: var(--accent-color);
+}
+
 .header {
   border: 1px solid transparent;
   border-bottom-color: #ECECEC;
@@ -197,12 +310,13 @@ img {
 .logo {
   display: block;
   min-width: 145px;
-  color: var(--accent-color);
-  font-family: Raleway, sans-serif;
+  font-family: Raleway;
   font-weight: 700;
   font-size: 26px;
-  line-height: 1.19;
+  line-height: 1.1923076923;
   letter-spacing: 0.03em;
+  color: var(--accent-color);
+  font-family: Raleway, sans-serif;
 }
 
 .header__logo {
@@ -228,11 +342,11 @@ img {
   height: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: var(--primary-text-color);
-  font-size: 14px;
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 14px;
+  line-height: 1.1428571429;
   letter-spacing: 0.02em;
+  color: var(--primary-text-color);
 }
 
 .nav__link--current {
@@ -273,11 +387,11 @@ img {
   height: 100%;
   padding-top: 32px;
   padding-bottom: 32px;
-  color: var(--title-text-color);
-  font-size: 14px;
   font-weight: 500;
-  line-height: 1.14;
+  font-size: 14px;
+  line-height: 1.1428571429;
   letter-spacing: 0.02em;
+  color: var(--title-text-color);
 }
 
 .contact__icon {
@@ -300,44 +414,9 @@ img {
   background-size: cover;
 }
 
-.hero-title {
-  margin: auto;
-  max-width: 696px;
-  margin-bottom: 30px;
-  color: var(--more-text-color);
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.hero-btn {
-  padding: 10px 30px;
-  border-radius: 4px;
-  border: 1px solid transparent;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.88;
-  align-items: center;
-  letter-spacing: 0.06em;
-  color: var(--more-text-color);
-  background: var(--accent-color);
-  cursor: pointer;
-  transition: background-color var(--transition), color var(--transition), box-shadow var(--transition);
-}
-.hero-btn:hover, .hero-btn:focus {
-  background: #188CE8;
-  color: var(--more-text-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  outline: transparent;
-}
-
 .features-list {
   display: flex;
 }
-
 .features-list .list {
   width: 270px;
 }
@@ -351,11 +430,6 @@ img {
   background-color: #F5F4FA;
 }
 
-.feature-title {
-  margin-bottom: 10px;
-  color: var(--primary-text-color);
-}
-
 .feature-text {
   color: var(--title-text-color);
   font-size: 14px;
@@ -363,43 +437,13 @@ img {
   letter-spacing: 0.03em;
 }
 
-.work-title {
-  margin-bottom: 50px;
-}
-
 .work-list {
   display: flex;
   align-items: center;
 }
 
-.section.work {
-  padding-top: 0;
-}
-
 .work-item {
   position: relative;
-}
-
-.work-subtitle {
-  position: absolute;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 70px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.71;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  background: rgba(47, 48, 58, 0.8);
-  color: #FFFFFF;
-}
-
-.teams-title {
-  margin-bottom: 50px;
 }
 
 .teams-object {
@@ -412,17 +456,6 @@ img {
 .teams-subject {
   padding-top: 30px;
   padding-bottom: 30px;
-}
-
-.teams-name {
-  margin-bottom: 10px;
-  color: var(--primary-text-color);
-  font-weight: 500;
-}
-
-.teams-expert {
-  margin-bottom: 16px;
-  color: var(--title-text-color);
 }
 
 .teams-list {
@@ -656,11 +689,11 @@ img {
   top: 0;
   padding: 63px 24px;
   height: 100%;
-  color: var(--more-text-color);
   background: rgba(33, 150, 243, 0.9);
   font-size: 18px;
-  line-height: 1.56;
+  line-height: 1.5555555556;
   letter-spacing: 0.03em;
+  color: var(--more-text-color);
   transform: translateY(101%);
   transition: transform var(--transition);
   overflow: auto;
@@ -706,41 +739,6 @@ img {
 }
 .backdrop.is-hidden .modal {
   transform: translate(-50%, -50%) scale(0) rotate(-360deg);
-}
-
-.modal-close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 30px;
-  height: 30px;
-  background: var(--primary-bgc);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: border-color var(--transition), fill var(--transition);
-}
-.modal-close:hover, .modal-close:focus {
-  outline: transparent;
-  border-color: var(--accent-color);
-}
-
-.modal-close:hover > .close-icon,
-.modal-close:focus > .close-icon {
-  fill: var(--accent-color);
-}
-
-.form-title {
-  margin-bottom: 12px;
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--primary-text-color);
 }
 
 .form-group {
@@ -804,7 +802,7 @@ img {
   justify-content: center;
   margin: 0;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.7142857143;
   letter-spacing: 0.03em;
   color: var(--title-text-color);
 }
@@ -813,7 +811,7 @@ img {
   height: 120px;
   padding: 16px 12px;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.7142857143;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
   transition: outline var(--transition), border-color var(--transition);

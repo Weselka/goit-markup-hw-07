@@ -600,12 +600,12 @@ img {
 .flex-elements {
   display: flex;
   flex-wrap: wrap;
+  margin: -15px;
   justify-content: center;
 }
 .flex-elements > .item {
-  flex-basis: calc(33.3333333333% - var(--gallery-section-gap));
-  margin-left: var(--gallery-section-gap);
-  margin-top: var(--gallery-section-gap);
+  margin: 15px;
+  flex-basis: calc(100% / 3 - 30px);
   background: var(--primary-bgc);
 }
 .flex-elements .button:not(:last-child) {
@@ -613,10 +613,6 @@ img {
 }
 .flex-elements.button {
   margin-bottom: 50px;
-}
-.flex-elements.gallery {
-  margin-left: calc(-1 * var(--gallery-section-gap));
-  margin-top: calc(-1 * var(--gallery-section-gap));
 }
 
 .gallery-subject {
@@ -642,6 +638,7 @@ img {
 }
 
 .gallery-section {
+  display: block;
   transition: box-shadow var(--transition);
 }
 .gallery-section:hover, .gallery-section:focus {

@@ -1,12 +1,14 @@
 .flex-elements {
-    display: flex;
-    flex-wrap: wrap;
+    // display: flex;
+    // flex-wrap: wrap;
+    @include list(flex, wrap, -15px, null, null, null, null);
     justify-content: center;
 
     &>.item {
-        flex-basis: calc(100% / 3 - var(--gallery-section-gap));
-        margin-left: var(--gallery-section-gap);
-        margin-top: var(--gallery-section-gap);
+        // flex-basis: calc(100% / 3 - var(--gallery-section-gap));
+        // margin-left: var(--gallery-section-gap);
+        // margin-top: var(--gallery-section-gap);
+        @include item(15px, null, null, null, null, 3, 30px);
 
         background: var(--primary-bgc);
     }
@@ -19,10 +21,11 @@
         margin-bottom: 50px;
     }
 
-    &.gallery {
-        margin-left: calc(-1 * var(--gallery-section-gap));
-        margin-top: calc(-1 * var(--gallery-section-gap));
-    }
+    // &.gallery {
+    //     margin-left: calc(-1 * var(--gallery-section-gap));
+    //     margin-top: calc(-1 * var(--gallery-section-gap));
+    // }
+    
 }
 
 .gallery-subject {
@@ -49,6 +52,7 @@
 }
 
 .gallery-section {
+    display: block;
     transition: box-shadow var(--transition);
     &:hover,
     &:focus {

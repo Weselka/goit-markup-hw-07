@@ -1,8 +1,12 @@
 .features-list {
     display: flex;
-    
-    & .list {
+}
+
+.feature-item {
     width: 270px;
+
+    &:not(:last-child) {
+    margin-right: 30px;
 }
 }
 

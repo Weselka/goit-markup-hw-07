@@ -11,11 +11,6 @@ img {
 
 .list {
     list-style: none;
-    .features-list &:not(:last-child),
-    .work-list &:not(:last-child),
-    .teams-list &:not(:last-child) {
-        margin-right: 30px;
-}
 }
 
 .link {

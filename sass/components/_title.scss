@@ -1,13 +1,9 @@
 .work-title,
 .teams-title,
 .clients-title {
-    @include font(null, 500, 16px, 26px, 0.03em, var(--primary-text-color));
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.17;
+    @include font(null, 700, 36px, 42px, 0.03em, var(--primary-text-color));
+    
     text-align: center;
-    letter-spacing: 0.03em;
-    color: var(--primary-text-color);
 }
 
 .teams-title,
@@ -16,6 +12,8 @@
 }
 
 .work-subtitle {
+    @include font(null, 700, 14px, 24px, 0.03em, #FFFFFF);
+
     position: absolute;
     bottom: 0;
 
@@ -24,25 +22,18 @@
     justify-content: center;
 
     width: 100%;
-    height: 70px;
-
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.71;
+    height: 70px;    
+   
     text-align: center;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
 
     background: rgba(47, 48, 58, 0.8);
-    color: #FFFFFF;
 }
 
 .teams-name,
 .teams-expert {
-    font-size: 16px;
-    line-height: 1.19;
+    @include font(null, null, 16px, 19px, 0.03em, null);
     text-align: center;
-    letter-spacing: 0.03em;
 }
 
 .teams-name {
@@ -60,11 +51,8 @@
 
 .feature-title,
 .footer__title {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-
+    @include font(null, 700, 14px, 16px, 0.03em, null);
+    
     text-transform: uppercase;
 }
 
@@ -75,46 +63,29 @@
 }
 
 .gallery__title {
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 2;
-    letter-spacing: 0.06em;
-    color: var(--primary-text-color);
+    @include font(null, 700, 18px, 36px, 0.06em, var(--primary-text-color));
 }
 
 .gallery__post-title {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.88;
-    letter-spacing: 0.03em;
-    color: var(--title-text-color);
+    @include font(null, 400, 16px, 30px, 0.03em, var(--title-text-color));
 }
 
 
 .hero-title {
+    @include font(null, 900, 44px, 60px, 0.06em, var(--more-text-color));
+
     margin: auto;
     max-width: 696px;
-    margin-bottom: 30px;
-
-
-    color: var(--more-text-color);
-    font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
-    letter-spacing: 0.06em;
+    margin-bottom: 30px;    
 
     text-align: center;
     text-transform: uppercase;
 }
 
 .form-title {
-    margin-bottom: 12px;
+    @include font(null, 700, 20px, 23px, 0.03em, var(--primary-text-color));
 
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.15;
+    margin-bottom: 12px;    
+
     text-align: center;
-    letter-spacing: 0.03em;
-
-    color: var(--primary-text-color);
 }
